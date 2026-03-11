@@ -1,0 +1,12 @@
+[Unit]
+Description=PostgreSQL data preparation (initdb if PGDATA empty)
+After=local-fs.target
+Before=postgresql.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/postgres-prep.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
