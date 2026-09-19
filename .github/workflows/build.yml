@@ -139,13 +139,6 @@ jobs:
           docker tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest "$SHA_TAG" || true
           docker push "$SHA_TAG" || true
 
-      - name: Trigger downstream rebuilds
-        env:
-          GH_TOKEN: ${{ secrets.CRUNCHTOOLS_DISPATCH_TOKEN }}
-        run: |
-          gh api repos/crunchtools/zabbix/dispatches \
-            -f event_type=parent-image-updated || true
-
   validate-constitution:
     name: Constitution Validation
     runs-on: ubuntu-latest
