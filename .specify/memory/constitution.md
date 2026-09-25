@@ -1,9 +1,9 @@
 # ubi10-httpd-php-postgres Constitution
 
-> **Version:** 1.0.0
+> **Version:** 1.0.1
 > **Ratified:** 2026-03-10
 > **Status:** Active
-> **Inherits:** [crunchtools/constitution](https://github.com/crunchtools/constitution) v1.0.0
+> **Inherits:** [crunchtools/constitution](https://github.com/crunchtools/constitution) v1.17.0
 > **Profile:** Container Image
 
 UBI 10 PHP + PostgreSQL leaf image. Inherits Apache httpd, PHP 8.3, php-fpm, and all PHP extensions from ubi10-httpd-php. Adds PostgreSQL server and php-pgsql for Zabbix hosting. Requires RHSM for postgresql-server package.
